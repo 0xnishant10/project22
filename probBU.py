@@ -91,10 +91,11 @@ def category_maintenance():
         else:
             print("Please select a valid category.")
             category_maintenance()
-print(category_maintenance())
-
-
-print("---------------------------------------------------------------------------------")
+if department_of_query == "3":
+    print(category_maintenance())
+    print("---------------------------------------------------------------------------------")
+else:
+    pass
 
 
 # Taking query Input from the student
