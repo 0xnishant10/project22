@@ -1,4 +1,7 @@
 import department
+import date_time
+
+
 print('''Welcome to ProbBU,
          For the Bennettians,
          By the Bennettians,
@@ -92,6 +95,10 @@ print("-------------------------------------------------------------------------
 #Taking query Input from the student
 print(f"Enter your query related to {department.d3}")
 query = input()
+
+print("Date and time of query",date_time.today_date, date_time.current_time)
+
+
 
 
 
