@@ -1,11 +1,10 @@
-import department
-import date_time
+from datetime import datetime
 
 
 print('''Welcome to ProbBU,
          For the Bennettians,
          By the Bennettians,
-         A Place for solutions of all your University Related Problems.''')
+         A Platform for all your University related problems.''')
 
 # Taking Input Student Info
 student = ""
@@ -36,6 +35,18 @@ phone_no = input("Phone Number: \n")
 print("---------------------------------------------------------------------------------")
 
 
+#For Departments
+d1 = "IT Department"
+d2 = "Finance Department"
+d3 = "Maintenance Department"
+
+#if Maintenance Department then following sub departments
+
+sub_d1 = "Furniture"
+sub_d2 = "Electrical"
+sub_d3 = "Cleaning"
+
+
 # Asking the department of Query
 department_of_query = ""
 print("What Department do you want to raise your query in?")
@@ -47,11 +58,11 @@ def enter_department():
 "3" for "Maintenance Department"''')
         department_of_query=input()
         if department_of_query == "1":
-            return department.d1
+            return d1
         elif department_of_query == "2":
-            return department.d2
+            return d2
         elif department_of_query == "3":
-            return department.d3
+            return d3
         else:
             print("Please select a valid query department.")
             enter_department()
@@ -60,9 +71,9 @@ def enter_department():
 "2" for "Finance Department"''')
         department_of_query = input()
         if department_of_query == "1":
-            return department.d1
+            return d1
         elif department_of_query == "2":
-            return department.d2
+            return d2
         else:
             print("Please select a valid query department.")
             enter_department()
@@ -83,11 +94,11 @@ def category_maintenance():
         global category_of_maintenance_var
         category_of_maintenance_var = input()
         if category_of_maintenance_var == "1":
-            return department.sub_d1
+            return sub_d1
         elif category_of_maintenance_var == "2":
-            return department.sub_d2
+            return sub_d2
         elif category_of_maintenance_var == "3":
-            return department.sub_d3
+            return sub_d3
         else:
             print("Please select a valid category.")
             category_maintenance()
@@ -99,12 +110,18 @@ else:
 
 
 # Taking query Input from the student
-print(f"Enter your query related to {department.d3} :")
+print(f"Enter your query :")
 query = input()
 
+
+now = datetime.now()
+today_date=datetime.date(datetime.now()) #Current Date
+current_time = now.strftime("%H:%M:%S") #Current Time
+
+
 # Date and Time of Query
-present_date = date_time.today_date
-present_time = date_time.current_time
+present_date = today_date
+present_time = current_time
 print("                                 ",present_date)
 print("                                 ",present_time)
 
