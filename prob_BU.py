@@ -1,7 +1,5 @@
 import datetime
-
-# To generate a random number
-# For Ticket Number
+# For generating Ticket Number
 import random
 
 print('''Welcome to ProbBU,
@@ -16,7 +14,7 @@ name = input("Name: \n")
 
 
 # Check for validation of year
-l_year = ["1","2","3","4","5"]
+l_year = ["1", "2", "3", "4", "5"]
 def valid_year():
     global year
     year = input("Year of Study: \n")
@@ -203,8 +201,7 @@ second = current_time.second
 print("Your query has been submitted at ",hour,":",minute,":",second," on ",day,":",month,":",year)
 
 # Generating Ticket Number Of Query
-for i in range(300,600):
-    ticket_number = i
+ticket_number = random.randint(300,600)
 print("Your Query's Ticket Number for ",name_of_department,"is",ticket_number)
 print("Kindly refer to this Ticket Number when visiting the respective Department")
 
@@ -213,19 +210,37 @@ print("-------------------------------------------------------------------------
 # Query Resolution for Finance Department
 if department_of_query == "2":
     print("Your query has been sent to the Finance Department")
-    print("Kindyly visit the Finance Department on",day+1,":",month,":",year,"Between 8am to 5.30pm")
+    print("Kindly visit the Finance Department on",day+1,":",month,":",year,"Between 8am to 5.30pm")
 
 
 # Query Resolution for IT Department
 if department_of_query == "1":
     print("Your query has been sent to the IT Department")
-    print("Kindyly visit the IT Department on",day+1,":",month,":",year,"Between 8am to 5.30pm")
+    if category_of_It_var == "1":
+        print("A personal will visit your room",room,"on",day+1,":",month,":",year,"at 15:00:00 to look upon the issue regarding the Wi-Fi.")
+    else:
+        print("Kindly visit the IT Department on",day+1,":",month,":",year,"Between 8am to 5.30pm")
 
 
 
 # Query Resolution for Maintenance Department
 if department_of_query == "3":
     if category_of_maintenance_var == "1": # Furniture
+        print("Your query has been sent to the Maintenance Department")
+        print("A personal will visit your room",room,"on",day+1,":",month,":",year,"at 15:00:00 to look upon the issue regarding the furniture.")
+    elif category_of_maintenance_var == "2": # Electrical
+        print("Your query has been sent to the Maintenance Department")
+        print("A personal will visit your room", room, "on", day + 1, ":", month, ":", year,"at 15:00:00 to look upon the electrical issue.")
+    elif category_of_maintenance_var == "3": # Cleaning
+        print("Your query has been sent to the Maintenance Department")
+        print("A personal will visit your room", room, "on", day + 1, ":", month, ":", year,"at 15:00:00 to clean the room")
+
+
+print("Thank You!")
+
+
+
+
 
 
 
