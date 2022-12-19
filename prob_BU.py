@@ -63,12 +63,16 @@ sub_d1 = "Furniture"
 sub_d2 = "Electrical"
 sub_d3 = "Cleaning"
 
+# IT department's sub categories
+
 it_sub1 = "Wi-Fi"
 it_sub2 = "Attendance and Fingerprint"
 it_sub3 = "Coll-Poll"
 it_sub4 = "Codetantra"
 it_sub5 = "New Id Card"
 it_sub6 = "Others"
+
+# Finance department sub Categories
 
 fin_sub1 = "Fee Receipt"
 fin_sub2 = "Balance Fee"
@@ -236,7 +240,7 @@ if department_of_query == "3":
         print("A personal will visit your room", room, "on", day + 1, ":", month, ":", year,"at 15:00:00 to clean the room")
 
 
-print("Thank You!")
+print("Thank You!");
 
 
 
